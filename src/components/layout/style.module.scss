@@ -1,0 +1,232 @@
+@import '../../styles/functions.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+$drawerMenuMobileMaxWidth: pxToRem(380);
+
+.defaultLayout {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+// .body {
+//     padding: 1rem 2rem;
+// }
+
+.headerPage {
+    // padding: pxToRem(20) $header-horizontal-padding;
+    // height: $header-height;
+    padding: 2rem;
+
+    // border-bottom: 0.5px solid;
+    box-shadow: rgb(229 232 235) 0px 1px 0px 0px;
+
+    &Mobile {
+        padding: pxToRem(20) $header-mobile-horizontal-padding;
+    }
+}
+
+.drawerMenuMobile {
+    margin-top: $header-height;
+
+    :global {
+        .ant-drawer-content-wrapper {
+            max-width: $drawerMenuMobileMaxWidth;
+        }
+        .ant-drawer-content {
+            background: #060616;
+        }
+        .ant-drawer-body {
+            padding: 0;
+        }
+    }
+    .menu {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        padding: 0 24px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+    .activeMenu {
+        // background: rgba(24, 160, 251, 0.12);
+        background: white;
+    }
+    .walletInfo {
+        width: 100%;
+    }
+    // .btnConnectWallet {
+    //     border: none;
+    //     margin: 24px;
+    //     .btnWallet {
+    //         width: 255px;
+    //         height: 48px;
+    //     }
+    // }
+}
+
+.menu {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 24px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.activeMenu {
+    color: var(--color-blue);
+}
+
+.btnConnectWallet {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 32px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.modalConnect {
+    :global {
+        .ant-modal-content {
+            border-radius: 16px;
+            background-color: var(--color-dark);
+        }
+        .ant-modal-body {
+            padding: 20px;
+            border-radius: 16px;
+        }
+    }
+    .modalConnectTitle {
+        color: var(--color-white);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
+    .modalConnectText {
+        color: var(--color-white);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--color-light);
+        margin-bottom: 20px;
+    }
+}
+
+.walletInfo {
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: rgba(6, 147, 227, 1);
+    span {
+        color: var(--color-white);
+    }
+}
+
+.inputCopy {
+    background: black;
+    border-radius: 8px;
+    color: var(--color-white);
+    height: 52px;
+    padding: 14px 16px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .buttonCoppy {
+        &:hover,
+        &:focus {
+            background: none;
+        }
+        background: none;
+        border: none;
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .viewBtn {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--color-blue);
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .gotoAdminGroup {
+        margin-top: 10px;
+        .gotoAdminIcon {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-blue);
+        }
+
+        .gotoProfileIcon {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 4px;
+        }
+    }
+
+    .disconnectBtn {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: $color-pink;
+        cursor: pointer;
+    }
+}
+
+.selectAfter {
+    width: 90px;
+    :global {
+        .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+            background-color: transparent;
+            color: var(--color-blue);
+            border: none;
+        }
+        .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+            box-shadow: none;
+        }
+        .ant-select-arrow {
+            color: var(--color-blue);
+        }
+    }
+}
+
+.walletBalance {
+    height: 35px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    .coinText {
+        margin-left: 5px;
+    }
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .modalConnect {
+        :global {
+            .ant-modal-body {
+                padding: 20px;
+            }
+        }
+    }
+}

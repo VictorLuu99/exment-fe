@@ -1,0 +1,5 @@
+export const enum ActionType {
+    EMAIL_CHANGE = 'EMAIL_CHANGE',
+    RESPONSE_TEXT_CHANGE = 'RESPONSE_TEXT_CHANGE',
+    LOADING_DATA = 'LOADING_DATA',
+}

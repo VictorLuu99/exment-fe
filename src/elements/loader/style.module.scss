@@ -1,0 +1,25 @@
+@import '../../styles/mixins.scss';
+
+.loader {
+    &Spin {
+        position: relative;
+        display: block;
+        height: 1em;
+        width: 1em;
+        @include animation(spinAround 0.7s infinite linear);
+        color: var(--color-blue);
+        border: 2px solid currentColor;
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+}
+
+@include keyframes(spinAround) {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

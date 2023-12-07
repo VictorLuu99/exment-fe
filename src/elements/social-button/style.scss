@@ -1,0 +1,30 @@
+@import 'src/styles/variables';
+
+.social-button {
+    border-radius: 100%;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    background: $color-white;
+
+    &:hover {
+        transition: all 0.2s ease 0s;
+        box-shadow: rgb(0 0 0 / 10%) 0px 2px 10px;
+    }
+
+    &__image {
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+
+        > img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

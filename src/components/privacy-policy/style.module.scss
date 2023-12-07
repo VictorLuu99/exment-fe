@@ -1,0 +1,31 @@
+@import '../../styles/functions';
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.privacyContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 1 0%;
+}
+.privacyContent {
+    width: 80%;
+    margin: 0px auto;
+    max-width: 1280px;
+    
+}
+.textHeader {
+    font-weight: 600;
+    font-size: 60px;
+    color: rgb(4, 17, 29);
+}
+.textHighlinght {
+    color: rgb(32, 129, 226);
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .privacyContent {
+        width: 85%;
+    }
+}

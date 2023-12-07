@@ -1,0 +1,10 @@
+.filter-item-custom {
+    display: flex;
+    align-items: center;
+    > img {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        margin-right: 6px;
+    }
+}

@@ -1,0 +1,102 @@
+@import 'antd/dist/reset.css';
+@import './functions';
+@import './variables';
+@import 'antd-notifications-messages/lib/styles/style.css';
+
+@font-face {
+    font-family: $font-montserrat-bold;
+    src: url('../../public/fonts/Montserrat-Bold.otf');
+}
+
+@font-face {
+    font-family: $font-montserrat-light;
+    src: url('../../public/fonts/Montserrat-Light.otf');
+}
+
+@font-face {
+    font-family: $font-montserrat-medium;
+    src: url('../../public/fonts/Montserrat-Medium.otf');
+}
+
+@font-face {
+    font-family: $font-montserrat-regular;
+    src: url('../../public/fonts/Montserrat-Regular.otf');
+}
+
+@font-face {
+    font-family: $font-montserrat-semibold;
+    src: url('../../public/fonts/Montserrat-SemiBold.otf');
+}
+
+:root {
+    --color-primary: #3c8dbc;
+    --color-secondary: #0c2080;
+    --color-white: #ffffff;
+    --background-scrollbar-track: #eaeaea;
+    --background-scrollbar-thumb: #c0c0c0;
+    --color-blue: #18a0fb;
+    --color-gray: #181722;
+    --color-light: #64748b;
+    --color-light2: #cbd5e1;
+    --color-dark: #1e212c;
+    --color-section: #3e405b;
+    --color-title: #f1f5f9;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    // background-image: url('../../public/images/background.png');
+    background-size: 100% 120%;
+    font-family: $font-montserrat-regular;
+    overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+    width: pxToRem(8);
+    height: pxToRem(8);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-scrollbar-track);
+    border-radius: pxToRem(24);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background-scrollbar-thumb);
+    border-radius: pxToRem(24);
+}
+
+.r-message {
+    .ant-message-custom-content {
+        display: flex;
+        align-items: center;
+        min-height: pxToRem(40);
+    }
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.ant-tabs-tab {
+    color: $color-text-02;
+    font-family: $font-montserrat-medium;
+    font-size: 24px;
+}

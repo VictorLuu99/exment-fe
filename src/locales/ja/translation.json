@@ -1,0 +1,42 @@
+{
+    "header": {
+        "connectWallet": "Connect wallet",
+        "wallet": "Wallet",
+        "connectMetaMask": "Connected with MetaMask",
+        "viewButton": "View on Explorer scan",
+        "goToAdminPage": "Go to admin page",
+        "goToProfilePage": "Go to profile page",
+        "disconnectButton": "Disconnect",
+        "initializing": "Initializing...",
+        "success": "Success",
+        "textConnected": "Your wallet is now connected.",
+        "unsupportedNetwork": "Unsupported Network",
+        "unsupportedNetworkDesc": "DAPP Exment is currently not supported on your network. Please switch to the Etherium to use DAPP.",
+        "installMetamask": "No Ethereum browser extension detected, please install MetaMask",
+        "declinedAction": "You declined the action in your wallet",
+        "welcomExment": "Welcome to Exment Dapp",
+        "contentPolicy": "By connecting your wallet and using Exment, and you agree to our",
+        "termsOfService": "Terms of Service",
+        "and": "and",
+        "privacyPolicy": "Privacy Policy"
+    },
+    "countdown": {
+        "title": "Countdown",
+        "days": "Days",
+        "hours": "Hours",
+        "mins": "Mins",
+        "secs": "Secs",
+        "ends": "ends",
+        "starts": "starts"
+    },
+    "error": {
+        "empty": "This field cannot be empty.",
+        "maxQuantity": "You cannot enter more than",
+        "invalidValue": "Invalid value"
+    },
+    "home": {
+        "noItem": "There is no item",
+        "title": "List of companies using Exment's services",
+        "loadMore": "Load more"
+    }
+}

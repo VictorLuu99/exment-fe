@@ -1,0 +1,45 @@
+@use 'sass:math';
+
+$size-base: 16;
+
+// Usage: pxToRem(20)
+@function pxToRem($value) {
+    $remValue: math.div($value, $size-base) * 1rem;
+    @return $remValue;
+    // @return $value * 1px;
+}
+
+// Usage: long-shadow('box', #000000 or long-shadow('text', #000000, 20)
+@function long-shadow($type, $color, $count: 100, $reverse: false, $fade: false) {
+    @if $type == null {
+        @error "Shadow type is required, 'box' or 'text'.";
+    }
+    @if $color == null {
+        @error "Color is required.";
+    }
+
+    $rgba: rgba($color, 1);
+    $offset: 0;
+    $shadow: null;
+
+    @if $type == 'box' {
+        $shadow: 0px 0px 0px 0px $rgba;
+    } @else if $type == 'text' {
+        $shadow: 0px 0px 0px $rgba;
+    } @else {
+        @error "Error: '#{$type}' is not recognised. Use 'box' or 'text' instead.";
+    }
+
+    @for $i from 1 to $count {
+        $offset: if($reverse, $i * -1, $i);
+        $rgba: if($fade, rgba($color, 1 - $i / $count), $rgba);
+
+        @if $type == 'box' {
+            $shadow: #{$shadow}, #{$offset}px #{$i}px 0px 0px $rgba;
+        } @else if $type == 'text' {
+            $shadow: #{$shadow}, #{$offset}px #{$i}px 0px $rgba;
+        }
+    }
+
+    @return $shadow;
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Kajitory",
+        "mail": "Kajitory@email.com",
+        "address": "0x283dc6ec6dfa11c87947bf6b26e66b6522bf15af"
+    },
+    {
+        "name": "CompanyDai",
+        "mail": "dai@trithucmoi.com",
+        "address": "0xb6bcc605163714d0af8544aad8aabde7a54ae179"
+    },
+    {
+        "name": "CompanyNhung",
+        "mail": "nhung@trithucmoi.com",
+        "address": "0x63fcf2fbb22eefabe582782e0c90d81bdd2bec54"
+    },
+    {
+        "name": "CompanyA",
+        "mail": "companyA@gmail.com",
+        "address": "0x400ee0c820144c8bb559ace1ad75e5c13e750334"
+    },
+    {
+        "name": "CompanyB",
+        "mail": "companyB@gmail.com",
+        "address": "0xf63eb8f628af8901b3ddccc00a69bee916f89536"
+    },
+    {
+        "name": "Dead Address",
+        "mail": "NA",
+        "address": "0x000000000000000000000000000000000000dead"
+    }
+]

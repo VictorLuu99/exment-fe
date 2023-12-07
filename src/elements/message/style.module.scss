@@ -1,0 +1,13 @@
+@import '../../styles/functions';
+
+.r-message {
+    .ant-message-custom-content {
+        display: flex;
+        align-items: center;
+        min-height: pxToRem(40);
+    }
+}
+
+:global .notification-close {
+    display: none;
+}

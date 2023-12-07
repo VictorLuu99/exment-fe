@@ -1,0 +1,38 @@
+@import './functions.scss';
+
+$container-max-width: 1920px;
+$header-height: pxToRem(70);
+$header-horizontal-padding: pxToRem(60);
+$header-mobile-horizontal-padding: pxToRem(20);
+
+$breakpoints: (
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1536px,
+);
+
+$font-montserrat-bold: 'Montserrat-Bold';
+$font-montserrat-light: 'Montserrat-Light';
+$font-montserrat-medium: 'Montserrat-Medium';
+$font-montserrat-regular: 'Montserrat-Regular';
+$font-montserrat-semibold: 'Montserrat-Semibold';
+
+$color-primary: #3c8dbc;
+$color-secondary: #0c2080;
+$color-white: #ffffff;
+$background-scrollbar-track: #eaeaea;
+$background-scrollbar-thumb: #c0c0c0;
+$color-blue: #18a0fb;
+$color-gray: #181722;
+$color-light: #64748b;
+$color-light2: #cbd5e1;
+$color-dark: #1e212c;
+$color-section: #3e405b;
+$color-title: #f1f5f9;
+$color-pink: #ffa99e;
+$color-text-01: rgb(112, 122, 131);
+$color-text-02: rgb(4, 17, 29);
+$color-border: rgba(0, 0, 0, 0.1);

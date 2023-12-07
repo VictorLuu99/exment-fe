@@ -1,0 +1,109 @@
+@import './variables';
+
+/**
+    * Usage
+    * @include media-breakpoint-above(sm) or @media-breakpoint-above(768px) 
+*/
+@mixin media-breakpoint-above($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        @media only screen and (min-width: $breakpoint-value + 1) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $breakpoint + 1) {
+            @content;
+        }
+    }
+}
+
+/**
+    * Usage
+    * @include media-breakpoint-below(sm) or @media-breakpoint-below(768px) 
+*/
+
+@mixin media-breakpoint-below($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        @media only screen and (max-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+/**
+    * Usage
+    * @include media-breakpoint-between(sm, lg) or @media-breakpoint-between(768px, 1200px) 
+*/
+
+@mixin media-breakpoint-between($lower, $upper) {
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+        $lower-breakpoint: map-get($breakpoints, $lower);
+        $upper-breakpoint: map-get($breakpoints, $upper);
+
+        @media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $lower) and (max-width: ($upper - 1)) {
+            @content;
+        }
+    }
+}
+
+@mixin animation($value) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -o-animation: $value;
+    -ms-animation: $value;
+    animation: $value;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin placeholder() {
+    &::placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        @content;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        @content;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        @content;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        @content;
+    }
+}
+
+@mixin hover() {
+    @media (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}

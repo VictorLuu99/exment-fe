@@ -1,0 +1,40 @@
+.header {
+    padding: 0 16px !important;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.sidebar {
+    overflow: auto;
+    // height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    padding-top: 0px;
+    .ant-menu-item-group-title {
+        display: none;
+    }
+}
+
+.content {
+    transition: margin-left 0.3s;
+    padding: 1rem;
+
+    .breadcrumb-wrapper {
+        width: 100%;
+        background-color: rgba(150, 150, 150, 0.3);
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 2rem;
+        border-radius: 2px;
+
+        .styled-link {
+            & span:first-child {
+                vertical-align: middle;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
